@@ -23,5 +23,10 @@ Basic Features :-
 /workspaces/Nolan_Clone/nolan/templates/home.html
 ->WHAT IT SHOULD BE-> /workspaces/Nolan_Clone/nolan/templates/home.html
 References:-
+    https://medium.com/@namantam1/login-with-facebook-and-google-in-django-using-social-auth-app-django-d042bfeb04cb
+    https://github.com/namantam1/social-auth-app-django/tree/master
+    https://www.nolanai.app/
+    https://webkul.com/blog/how-to-generate-facebook-app-id/
+    https://getbootstrap.com/docs/5.3/components/navbar/
 Setup:-
     python manage.py runsslserver:-to ensure faacebook takes https
