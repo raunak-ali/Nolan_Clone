@@ -3,7 +3,8 @@ Basic Features :-
     1)Login(Google,Facebook,Email)
         Google:-
         Email:-
-    2)DashBoard(it sould take1)Title,2)Plot,3)Genre as input 
+    2)DashBoard:-Name  and all the scripts under that user
+    3)Create Script tab(it sould take1)Title,2)Plot,3)Genre as input 
                 and generate:-
                             1)Atleast 4 scenes along with thier titlles,
                             2)List of Characters
@@ -19,9 +20,17 @@ Basic Features :-
     4)make it offline capable
     5)Ensure data is all data is secure and encrypted 
 
-/workspaces/Nolan_Clone/nolan/templates/home.html
-/workspaces/Nolan_Clone/nolan/templates/home.html
-->WHAT IT SHOULD BE-> /workspaces/Nolan_Clone/nolan/templates/home.html
+Models:-
+    UserProfile=
+        -Email(Everytime one successfully logs in,check if the user already exists,if not create a new user profile)
+        -Scripts(List Data Structure)
+    Scripts:-
+        -id:-unique
+        -Title-Text
+        -Scenes-List Data Structure
+        -Characters-List Data Structure
+        PDF converted in the format
+
 References:-
     https://medium.com/@namantam1/login-with-facebook-and-google-in-django-using-social-auth-app-django-d042bfeb04cb
     https://github.com/namantam1/social-auth-app-django/tree/master
