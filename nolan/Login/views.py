@@ -35,7 +35,7 @@ def login(request):
       #Fetach Data of the existing User
     print(user_exists)
 
-    return render(request, "Home.html")
+    return render(request, "index.html")
   else:
     return render(request, "login.html") 
 
@@ -47,5 +47,5 @@ def login(request):
 
 
 def home(request):
-  return render(request, "home.html")
+  return render(request, "index.html")
 # Create your views here.

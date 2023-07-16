@@ -127,6 +127,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = "workspaces/Nolan_Clone/nolan/static/"
+MEDIA_ROOT="/static/img/"
+MEDIA_URL="/statiic/img/"
+STATICFILES_DIRS = [
+     BASE_DIR / "static"
+ ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
