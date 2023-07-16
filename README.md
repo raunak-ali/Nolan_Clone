@@ -32,10 +32,20 @@ Models:-
         PDF converted in the format
 
 References:-
-    https://medium.com/@namantam1/login-with-facebook-and-google-in-django-using-social-auth-app-django-d042bfeb04cb
-    https://github.com/namantam1/social-auth-app-django/tree/master
-    https://www.nolanai.app/
-    https://webkul.com/blog/how-to-generate-facebook-app-id/
-    https://getbootstrap.com/docs/5.3/components/navbar/
+    For  login
+        https://medium.com/@namantam1/login-with-facebook-and-google-in-django-using-social-auth-app-django-d042bfeb04cb
+        https://github.com/namantam1/social-auth-app-django/tree/master
+        https://www.nolanai.app/
+        https://webkul.com/blog/how-to-generate-facebook-app-id/
+        https://getbootstrap.com/docs/5.3/components/navbar/
+    for ChatGpt Integration:-
+        https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key
+        https://levelup.gitconnected.com/how-we-integrated-chatgpt-to-our-django-project-ca95ea50d371
+        https://www.geeksforgeeks.org/how-to-implement-chatgpt-in-django/
+        https://blog.devgenius.io/how-to-implement-chat-gpt-in-django-d741fc8f27de
 Setup:-
     python manage.py runsslserver:-to ensure faacebook takes https
+    /static/img/favicon.png
+    /workspaces/Nolan_Clone/nolan/static/css/style.css
+    /workspaces/Nolan_Clone/nolan/static/admin/css/base.css
+    /workspaces/Nolan_Clone/nolan/static/img/favicon.png
