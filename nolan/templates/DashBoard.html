@@ -1,0 +1,339 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medilab Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static "/img/favicon.png" %}" rel="icon">
+  <link href="{% static "/img/apple-touch-icon.png" %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static "/vendor/fontawesome-free/css/all.min.css" %}" rel="stylesheet">
+  <link href="{% static "/vendor/animate.css/animate.min.css" %}"rel="stylesheet">
+  <link href="{% static "/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "/vendor/bootstrap-icons/bootstrap-icons.css" %}" rel="stylesheet">
+  <link href="{% static "/vendor/boxicons/css/boxicons.min.css" %}" rel="stylesheet">
+  <link href="{% static "/vendor/glightbox/css/glightbox.min.css" %}" rel="stylesheet">
+  <link href="{% static "/vendor/remixicon/remixicon.css" %}" rel="stylesheet">
+  <link href="{% static "/vendor/swiper/swiper-bundle.min.css" %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static "/css/style.css" %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medilab
+  * Updated: Jun 23 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+		.popup {
+			position: fixed;
+			z-index: 1;
+			left: 24px;
+			top: 50px;
+      right:24px;
+			width: 520px;
+			height: auto;
+      margin: 0 auto;
+      font-size: 14px;
+			
+			background-color: rgba(0, 0, 0, 0.4);
+			display: none;
+      
+		}
+	
+		.popup-content button {
+			display: block;
+			margin: 0 auto;
+		}
+		.show {
+			display: block;
+		}
+		h1 {
+			color: green;
+		}
+	</style>
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="{% static "/img/hero_logo.png" %}" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">DashBoard</a></li>
+          <li><a class="nav-link scrollto" href="#about">About us</a></li>
+          <li><a class="nav-link scrollto" href="#services">Pricing</a></li>
+          <li ><button id="myButton" class="nav-link scrollto">Create Script</button>
+            <div id="myPopup" class="popup">
+              <div id="appointment" class="appointment-section">
+                <form action="" method="post" role="form" class="appointment-form">
+                  <div class="appointment-row">
+                    <div class="col-md-4 form-group">
+                      <h4>CREATE A TITLE</h4>
+                      <input type="text" name="Title" class="form-control" id="Title" placeholder="Title" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                      <div class="validate"></div>
+                    </div>
+                    <h5>Write your plot</h5>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                      <textarea type="text" class="form-control" name="plot" id="email" placeholder="Your PLOT" >
+                      </textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <h5>Select the genre</h5>
+                    <div class="col-md-4 form-group mt-3">
+                      <select name="doctor"  multiple>
+                        <option value="">Genre</option>
+                        <option value="Doctor 1">Doctor 1</option>
+                        <option value="Doctor 2">Doctor 2</option>
+                        <option value="Doctor 3">Doctor 3</option>
+                      </select>
+                    </div>
+                    <a href="#STRAT A Script" class="btn-get-started scrollto">Get Started</a>
+                    <a href="index.html" class="btn-get-started scrollto">Close</a>
+                  </div>
+                </form>
+        
+              </div>
+            </div>
+            <!-- End Appointment Section -->
+          </li>
+          <li><a class="nav-link scrollto" href="#doctors">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#doctors">Profile</a></li>
+        
+           
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+     
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+       
+        
+      
+      <h1>THIS  IS THE DASHBOARD</h1>
+      <h2>Unleash creativity with AI Copilot - craft compelling screenplays</h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+     
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i><svg viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg" width="50" height="32"><path d="M17.361 0C11.91 0 8.407 2.518 7.312 5.22 3.02 6.135 0 10.83 0 15.999c0 2.127.617 4.257 1.686 6.621C.813 23.687 0 25.026 0 27c0 2.587 1.694 5.08 4.713 6.469-.948 2.206-.745 4.333.385 5.847 1.173 1.573 3.144 2.391 5.261 2.553.642 1.686 1.798 2.857 3.079 3.414 1.458.635 2.95.717 3.923.717a4.593 4.593 0 003.641-1.79A4.63 4.63 0 0024.631 46h.002c.92.007 2.406-.077 3.877-.71 1.269-.548 2.423-1.699 3.084-3.34 1.598-.052 3.252-.29 4.654-1.079C37.823 39.984 39 38.304 39 36c0-.9-.325-1.733-.709-2.568 1.284-.639 2.296-1.456 2.85-2.465C41.839 29.695 42 28.3 42 27c0-1.993-.941-3.192-1.855-4.172 1.084-2.364 1.89-4.65 1.855-6.846-.093-5.834-4.025-9.93-8.29-10.777C32.76 2.707 30.06 0 24.64 0c-1.364 0-2.69.35-3.526 1.428-.04.053-.075.112-.113.168-.038-.056-.072-.115-.113-.168C20.05.35 18.725 0 17.36 0zm0 2c1.08 0 1.573.172 1.946.652.372.48.693 1.56.693 3.534v5.646a1.003 1.003 0 000 .326V16h-3v-5h-4.188C12.396 9.843 11.293 9 10 9c-1.645 0-3 1.355-3 3s1.355 3 3 3c1.293 0 2.395-.843 2.813-2H15v5h5v8h-7v6.188c-1.157.417-2 1.519-2 2.812 0 1.645 1.355 3 3 3s3-1.355 3-3c0-1.293-.843-2.395-2-2.813V28h5v6.832a1.003 1.003 0 000 .326v6.174C20 42.968 18.94 44 17.361 44c-.842 0-2.082-.097-3.125-.55-1.043-.455-1.889-1.166-2.265-2.69l-.188-.76H11c-1.834 0-3.466-.763-4.299-1.879-.832-1.116-1.053-2.574.158-4.61l.633-1.064-1.174-.394C3.267 31.027 2 28.976 2 27c0-1.72.638-2.587 1.541-3.574L3.93 23h3.257c.418 1.157 1.52 2 2.813 2 1.645 0 3-1.355 3-3s-1.355-3-3-3c-1.293 0-2.395.843-2.813 2H3.133C2.375 19.154 2 17.561 2 15.998c0-4.59 2.875-8.607 6.121-9.006l.66-.08.18-.639C9.409 4.7 12.239 2 17.36 2zm7.278 0c5.122 0 6.876 2.433 7.4 4.273l.182.64.658.08c3.372.413 7.038 3.837 7.121 9.023.03 1.84-.723 4.084-1.902 6.552l-.303.635.492.498C39.33 24.76 40 25.321 40 27c0 1.127-.154 2.166-.613 3.004-.293.534-.736 1.005-1.387 1.412V27h-9v-3.188c1.157-.417 2-1.519 2-2.812 0-1.645-1.355-3-3-3s-3 1.355-3 3c0 1.293.843 2.395 2 2.813V29h9v3.857a1 1 0 00.129.66l.002.002C36.649 34.578 37 35.476 37 36c0 1.696-.647 2.516-1.734 3.129-1.088.613-2.69.871-4.266.871h-.783l-.188.76c-.373 1.513-1.246 2.235-2.31 2.693-1.064.458-2.309.552-3.073.547C23.06 43.989 22 42.968 22 41.332V36h4.188c.417 1.157 1.519 2 2.812 2 1.645 0 3-1.355 3-3s-1.355-3-3-3c-1.293 0-2.395.843-2.813 2H22v-6.832a1.003 1.003 0 000-.326v-9.674a1.003 1.003 0 000-.326V13h8.188c.417 1.157 1.519 2 2.812 2 1.645 0 3-1.355 3-3s-1.355-3-3-3c-1.293 0-2.395.843-2.813 2H22V6.186c0-1.975.32-3.053.693-3.534.373-.48.867-.652 1.946-.652zM10 11c.544 0 .958.409.988.943A.978.978 0 0110 13c-.564 0-1-.436-1-1 0-.564.436-1 1-1zm23 0c.564 0 1 .436 1 1 0 .564-.436 1-1 1a.978.978 0 01-.988-.943A.978.978 0 0133 11zm-5 9c.564 0 1 .436 1 1a.978.978 0 01-1.016.986l-.043.002A.978.978 0 0127 21c0-.564.436-1 1-1zm-18 1c.564 0 1 .436 1 1 0 .564-.436 1-1 1a.978.978 0 01-.988-.943A.978.978 0 0110 21zm19 13c.564 0 1 .436 1 1 0 .564-.436 1-1 1a.978.978 0 01-.988-.943A.978.978 0 0129 34zm-15.057.012c.039.002.077.002.116 0 .533.03.941.445.941.988 0 .564-.436 1-1 1-.564 0-1-.436-1-1 0-.544.409-.958.943-.988z" fill="#E6D0B8"></path></svg></i>
+                    <h4>AI-Copilot</h4>
+                    <p>Enhance your screenwriting experience with GPT-powered editing features and AI-generated imagery</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i><svg width="50" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.992.547c-5.215 0-9.61 3.113-11.73 7.523-1.133-.78-2.43-1.347-3.907-1.347-3.714 0-6.703 2.941-6.925 6.601C2.707 14.672 0 18.152 0 22.328 0 27.66 4.34 32 9.672 32h31.426C46.004 32 50 28.004 50 23.098c0-4.551-3.488-8.18-7.906-8.7.015-.234.047-.46.047-.703 0-7.25-5.899-13.148-13.149-13.148zm0 2c6.172 0 11.149 4.98 11.149 11.148 0 .457-.035.914-.094 1.383l-.14 1.121H41.097A6.886 6.886 0 0148 23.098 6.887 6.887 0 0141.098 30H9.672A7.655 7.655 0 012 22.328c0-3.535 2.387-6.488 5.625-7.383l.762-.21-.028-.786c-.004-.14-.011-.21-.011-.219a4.993 4.993 0 015.007-5.007c1.391 0 2.637.562 3.543 1.468L18 11.297l.547-1.465c1.57-4.246 5.637-7.285 10.445-7.285zm-8.004 11.441a1 1 0 00-.695 1.719L24.586 20l-4.293 4.293a.992.992 0 00-.273.973.99.99 0 00.714.715.992.992 0 00.973-.274L26 21.414l4.293 4.293c.25.262.625.367.973.273a.99.99 0 00.715-.714.992.992 0 00-.274-.973L27.414 20l4.293-4.293a.997.997 0 00.223-1.105.995.995 0 00-1.637-.309L26 18.586l-4.293-4.293a1.008 1.008 0 00-.719-.305z" fill="#E6D0B8"></path></svg></i>
+                    <h4>Offline-Capable</h4>
+                    <p>Work on the go without having to rely on the cloud and an always-required internet connection</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i><svg width="47" height="42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10S29.5 0 24 0zM6.947.992A1 1 0 006.4 2.801l4 3a1 1 0 101.2-1.602l-4-3a1 1 0 00-.653-.207zm34.076 0a1 1 0 00-.623.207l-4 3a1 1 0 101.2 1.602l4-3a1 1 0 00-.577-1.809zM24 2c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8zm.8 4L21 7.2v1.4l2-.5V14h2V6h-.2zM5 9a1 1 0 100 2h5a1 1 0 100-2H5zm33 0a1 1 0 100 2h5a1 1 0 100-2h-5zm-26.977 4.992a1 1 0 00-.623.207l-4 3a1 1 0 101.2 1.602l4-3a1 1 0 00-.577-1.809zm25.924 0a1 1 0 00-.547 1.809l4 3a1 1 0 101.2-1.602l-4-3a1 1 0 00-.653-.207zm6.211 7.992a3.76 3.76 0 00-1.941.578l-11.1 6.84c-.256-.14-.57-.294-.984-.494-.476-.229-.973-.463-1.254-.59-1.51-.683-6.327-2.67-9.983-4.275a12.506 12.506 0 00-9.834-.092l-6.447 2.686a1 1 0 10.77 1.845l6.447-2.685a10.497 10.497 0 018.26.078c3.69 1.62 8.585 3.643 9.963 4.266.247.112.747.347 1.21.57.465.223.952.47.993.494.446.26.742.724.742 1.283 0 .841-.66 1.5-1.5 1.5-.12 0-.232-.013-.34-.039h-.002c-.025-.006-.816-.228-1.775-.51-.96-.281-2.18-.643-3.38-1-2.398-.713-4.716-1.408-4.716-1.408a1 1 0 00-.574 1.916s2.32.694 4.723 1.408c1.2.358 2.421.72 3.384 1.002.963.283 1.575.466 1.875.538.26.062.53.093.805.093 1.921 0 3.5-1.578 3.5-3.5 0-.592-.155-1.148-.418-1.638l10.693-6.59.01-.006a1.755 1.755 0 012.442.553 1.757 1.757 0 01-.53 2.427L28.424 39.185a4.004 4.004 0 01-3.762.584l-11.648-4.128a8.354 8.354 0 00-8.125.986l-3.485 2.557a1 1 0 101.184 1.61l3.484-2.554a6.344 6.344 0 016.225-.732l11.697 4.146a6.011 6.011 0 005.639-.875l15.736-11.924a3.785 3.785 0 001.049-5.115 3.785 3.785 0 00-3.26-1.756z" fill="#000"></path></svg></i>
+                    <h4>Free</h4>
+                    <p>Enjoy the NOLAN free version while also influencing the further development of the product</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i><svg width="40" height="40" fill="#E6D0B8" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.125.75l14.063 7.031a2.56 2.56 0 011.374 2.282c0 11.062-3.906 18.28-7.187 22.406-3.594 4.5-7.719 6.906-9.344 6.906-1.656 0-5.812-2.344-9.375-6.75C7.375 28.531 3.47 21.312 3.47 10.031c0-.968.531-1.812 1.375-2.25L18.875.75a2.583 2.583 0 012.25 0zM20 37.5c.625 0 4.281-1.656 7.938-6.219 3.062-3.875 6.75-10.687 6.75-21.218 0-.25-.126-.5-.344-.594L20.28 2.438A.912.912 0 0020 2.375c-.094 0-.188.031-.281.063L5.687 9.468c-.218.095-.343.313-.343.563-.032 10.75 3.656 17.563 6.75 21.406C15.719 35.907 19.375 37.5 20 37.5zm-1.563-15.063l7.938-7.937a.906.906 0 011.313 0c.375.344.375.938 0 1.313l-8.594 8.593a.953.953 0 01-.657.282.953.953 0 01-.656-.282l-3.75-3.75c-.375-.343-.375-.937 0-1.312.344-.375.938-.375 1.313 0l3.094 3.093z"></path></svg></i>
+                    <h4>Secure</h4>
+                    <p>Don’t worry, your screenplay is secure and encrypted with Nolan</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>What is NOLAN?</h3>
+              <h4>Lights, camera, action!</h4>
+            <h5>NolanAI is the ultimate tool for any screenwriter looking to improve their craft. With its AI-powered features and user-friendly interface, it can help you bring your stories to life in the most efficient and effective way possible, while respecting your unique creative voice.</h5>
+            <a href="#about" class="btn-get-started scrollto">Explore our premium plan!</a>
+           
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Features</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 details order-2 order-lg-1">
+            <h3>THE INDUSTRY STANDARD SCRIPT WRITING SOFTWARE</h3>
+            
+            <h4>Nolan provides a user-friendly interface, advanced formatting options, and helpful features such as character and scene breakdowns, revision tracking, and collaboration tools. With its powerful tools and intuitive design.</h4>
+          </div>
+          <div class="col-lg-4 text-center order-1 order-lg-2">
+            <img src="{% static " /img/1.png" %}" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 details order-2 order-lg-1">
+            <h3>TRACK EVERY EDIT WITH EASE</h3>
+            
+            <h4>A per-row script history list is a feature in scriptwriting software that allows writers to track changes made to their scripts on a row-by-row basis. With this feature, writers can see a complete history of edits made to each line of dialogue, stage direction, or action in their script. This makes it easy to compare different versions of a script and to identify where changes have been made. The per-row script history list is an essential tool for writers who want to keep track of their progress and ensure that their scripts are always up-to-date.</h4>
+          </div>
+          <div class="col-lg-4 text-center order-1 order-lg-2">
+            <img src="{% static "/img/2.png" %}" alt="" class="img-fluid" >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 details order-2 order-lg-1">
+            <h3>ASK NOLAN FOR SUGGESTION</h3>
+            
+            <h4>To help you create high-quality story, Nolan offers a powerful editing feature. With "Ask Nolan", you can easily enhance the quality of your text by highlighting the selected text, correcting any spelling and grammar errors, and adjusting the tone of the paragraph as necessary. This feature provides you with the flexibility to customize your text and make it more engaging and effective.</h4>
+          </div>
+          <div class="col-lg-4 text-center order-1 order-lg-2">
+            <img src="{% static "/img/3.png" %}" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 details order-2 order-lg-1">
+            <h3>CHANGE YOUR CHARACTER ACCENT</h3>
+            
+            <h4>Personalize your character and make it truly unique. "Change Accent" allows you to change your character's accent, making it sound more distinct and authentic. Whether you want to add a touch of personality to your character or create a character that stands out, this feature provides you with the flexibility to customize your character's accent to match your preferences. With this feature, you can create a character that truly represents you and brings your story to life.</h4>
+          </div>
+          <div class="col-lg-4 text-center order-1 order-lg-2">
+            <img src="{% static "/img/4.png" %}" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 details order-2 order-lg-1">
+            <h3>SCRIPT SMART</h3>
+            
+            <h4>Script Smart uses advanced algorithms to automatically format your text into a screenplay format. With Script Smart, you can save time and focus on writing by letting the software handle the formatting for you. This feature also provides suggestions and corrections to help ensure that your screenplay adheres to industry standards and is formatted correctly.</h4>
+          </div>
+          <div class="col-lg-4 text-center order-1 order-lg-2">
+            <img src="{% static "/img/5.png" %}" alt="" class="img-fluid">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      
+      
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; <strong><span>NolanCLONEEE</span></strong>
+        </div>
+        
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static "/vendor/purecounter/purecounter_vanilla.js" %}"></script>
+  <script src="{% static "/vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+  <script src="{% static "/vendor/glightbox/js/glightbox.min.js" %}"></script>
+  <script src="{% static "/vendor/swiper/swiper-bundle.min.js" %}"></script>
+  <script src="{% static "/vendor/php-email-form/validate.js" %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static "/js/main.js" %}"></script>
+  <script>
+    myButton.addEventListener("click", function () {
+        myPopup.classList.add("show");
+    });
+    closePopup.addEventListener("click", function () {
+        myPopup.classList.remove("show");
+    });
+    window.addEventListener("click", function (event) {
+        if (event.target == myPopup) {
+            myPopup.classList.remove("show");
+        }
+    });
+</script>
+</body>
+
+</html>

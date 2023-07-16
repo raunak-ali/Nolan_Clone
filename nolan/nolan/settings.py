@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "sslserver",
     "social_django",
     "User",
+    'multiselectfield',
 
 ]
 
@@ -161,8 +162,7 @@ SOCIAL_AUTH_PIPELINE = (
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
-LOGOUT_REDIRECT_URL = 'login'
-
+LOGOUT_REDIRECT_URL = 'home'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "164642861598-8hmt0ra0mfgj7v0kpbfb5c5r3bos7jr4.apps.googleusercontent.com"
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "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"

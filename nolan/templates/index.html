@@ -87,41 +87,43 @@
           <li><a class="nav-link scrollto" href="#about">About us</a></li>
           <li><a class="nav-link scrollto" href="#services">Pricing</a></li>
           <li ><button id="myButton" class="nav-link scrollto">Create Script</button>
-            <div id="myPopup" class="popup">
-              <div id="appointment" class="appointment-section">
-                <form action="" method="post" role="form" class="appointment-form">
-                  <div class="appointment-row">
-                    <div class="col-md-4 form-group">
-                      <h4>CREATE A TITLE</h4>
-                      <input type="text" name="Title" class="form-control" id="Title" placeholder="Title" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                      <div class="validate"></div>
-                    </div>
-                    <h5>Write your plot</h5>
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                      <textarea type="text" class="form-control" name="plot" id="email" placeholder="Your PLOT" >
-                      </textarea>
-                        <div class="validate"></div>
-                    </div>
-                    <h5>Select the genre</h5>
-                    <div class="col-md-4 form-group mt-3">
-                      <select name="doctor"  multiple>
-                        <option value="">Genre</option>
-                        <option value="Doctor 1">Doctor 1</option>
-                        <option value="Doctor 2">Doctor 2</option>
-                        <option value="Doctor 3">Doctor 3</option>
-                      </select>
-                    </div>
-                    <a href="#STRAT A Script" class="btn-get-started scrollto">Get Started</a>
-                    <a href="index.html" class="btn-get-started scrollto">Close</a>
-                  </div>
-                </form>
-        
-              </div>
-            </div>
+<div id="myPopup" class="popup">
+  <div id="appointment" class="appointment-section">
+    <form action="" method="post" role="form" class="appointment-form">
+      {% csrf_token %}
+      <div class="appointment-row">
+         <div class="col-md-4 form-group mt-3 mt-md-0" name="title">
+          <h4>CREATE A TITLE</h4>
+  {{ form.title }}
+          
+        </div>
+        <h5>Write your plot</h5>
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+        <textarea class="form-group" name="Plot" placeholder="Your PLOT">{{ form.Plot.value }}</textarea>
+          
+        </div>
+        <h5>Select the genre</h5>
+        <div class="col-md-4 form-group mt-3 mt-md-0" name="genres">
+        {{ form.genres }}
+        </div>
+        <div class="button-container">
+        <button type="submit" class="btn-get-started scrollto">Start Script</button>
+        <a href="index.html" class="btn-get-started scrollto">Close</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
             <!-- End Appointment Section -->
           </li>
           <li><a class="nav-link scrollto" href="#doctors">Blog</a></li>
+          {% if User %}
           <li><a class="nav-link scrollto" href="#doctors">Profile</a></li>
+          {% else %}
+          <li><a class="nav-link scrollto" href="{% url 'social:begin' 'google-oauth2' %}">Login</a></li>
+           <
+          {% endif %}
         
            
           
@@ -144,7 +146,14 @@
       <h1>Free Script Writing Software</h1>
       <h2>Unleash creativity with AI Copilot - craft compelling screenplays</h2>
       <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      <a href="#about" class="btn-get-started scrollto">LOgin</a>
+      {% if User %}
+      <a href="/DashBoard.html" class="btn-get-started scrollto">DASHBOARD</a>
+       <a href="{% url 'logout' %}" class="btn-get-started scrollto">LOGOUT</a>
+      {% else %}
+      
+
+      <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn-get-started scrollto">LOgin</a>
+      {% endif %}
     </div>
   </section><!-- End Hero -->
 
