@@ -43,9 +43,6 @@ References:-
         https://levelup.gitconnected.com/how-we-integrated-chatgpt-to-our-django-project-ca95ea50d371
         https://www.geeksforgeeks.org/how-to-implement-chatgpt-in-django/
         https://blog.devgenius.io/how-to-implement-chat-gpt-in-django-d741fc8f27de
+        https://platform.openai.com/docs/quickstart/closing
 Setup:-
-    python manage.py runsslserver:-to ensure faacebook takes https
-    /static/img/favicon.png
-    /workspaces/Nolan_Clone/nolan/static/css/style.css
-    /workspaces/Nolan_Clone/nolan/static/admin/css/base.css
-    /workspaces/Nolan_Clone/nolan/static/img/favicon.png
+    python manage.py runsslserver:-to ensure faacebook takes 

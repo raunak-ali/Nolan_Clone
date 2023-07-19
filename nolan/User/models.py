@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from multiselectfield import MultiSelectField
-from multiselectfield import MultiSelectField
+
 GENRE_CHOICES = (
         ('sci-fi', 'Science Fiction'),
         ('horror', 'Horror'),
@@ -15,9 +15,7 @@ class UserProfile(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField(unique=True)
-    scripts = models.ManyToManyField('Scripts',default="NULL")
-
-    
+    scripts = models.ManyToManyField('Scripts',default="NULL")   
 
 class Scripts(models.Model):
     id = models.AutoField(primary_key=True)

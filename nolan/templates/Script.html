@@ -37,34 +37,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <style>
-		.popup {
-			position: fixed;
-			z-index: 1;
-			left: 24px;
-			top: 50px;
-      right:24px;
-			width: 520px;
-			height: auto;
-      margin: 0 auto;
-      font-size: 14px;
-			
-			background-color: rgba(0, 0, 0, 0.4);
-			display: none;
-      
-		}
-	
-		.popup-content button {
-			display: block;
-			margin: 0 auto;
-		}
-		.show {
-			display: block;
-		}
-		h1 {
-			color: green;
-		}
-	</style>
+
 
 </head>
 
@@ -74,47 +47,20 @@
   
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" >
     <div class="container d-flex align-items-center">
 
       
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="logo me-auto"><img src="{% static "/img/hero_logo.png" %}" alt="" class="img-fluid"></a>
+     <h1 class="logo me-auto"><a href="index.html">{{form.title}}</a></h1>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">DashBoard</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">MEOW</a></li>
           <li><a class="nav-link scrollto" href="#about">About us</a></li>
           <li><a class="nav-link scrollto" href="#services">Pricing</a></li>
           <li ><button id="myButton" class="nav-link scrollto">Create Script</button>
-<div id="myPopup" class="popup">
-  <div id="appointment" class="appointment-section">
-    <form action="" method="post" role="form" class="appointment-form">
-      {% csrf_token %}
-      <div class="appointment-row">
-         <div class="col-md-4 form-group mt-3 mt-md-0" name="title">
-          <h4>CREATE A TITLE</h4>
-  {{ form.title }}
-          
-        </div>
-        <h5>Write your plot</h5>
-        <div class="col-md-4 form-group mt-3 mt-md-0">
-        <textarea class="form-group" name="Plot" placeholder="Your PLOT">{{ form.Plot.value }}</textarea>
-          
-        </div>
-        <h5>Select the genre</h5>
-        <div class="col-md-4 form-group mt-3 mt-md-0" name="genres">
-        {{ form.genres }}
-        </div>
-        <div class="button-container">
-        <button type="submit" class="btn-get-started scrollto">Start Script</button>
-        <a href="{% url 'home' %}" class="btn-get-started scrollto">Close</a>
-        </div>
-      </div>
 
-    </form>
-  </div>
-</div>
             <!-- End Appointment Section -->
           </li>
           <li><a class="nav-link scrollto" href="#doctors">Blog</a></li>
@@ -122,7 +68,7 @@
           <li><a class="nav-link scrollto" href="#doctors">Profile</a></li>
           {% else %}
           <li><a class="nav-link scrollto" href="{% url 'social:begin' 'google-oauth2' %}">Login</a></li>
-           
+           <
           {% endif %}
         
            
@@ -134,6 +80,34 @@
 
     </div>
   </header><!-- End Header -->
+
+<header id="headerScript" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <nav id="navbar-script" class="navbar-script  order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">SmartScript</a></li>
+          <li><a class="nav-link scrollto" href="#about">About us</a></li>
+          <li><a class="nav-link scrollto" href="#services">Pricing</a></li>
+          <li ><button id="myButton" class="nav-link scrollto">Create Script</button>
+
+          </li>
+          <li><a class="nav-link scrollto" href="#doctors">Blog</a></li>
+          {% if User %}
+          <li><a class="nav-link scrollto" href="#doctors">Profile</a></li>
+          {% else %}
+          <li><a class="nav-link scrollto" href="{% url 'social:begin' 'google-oauth2' %}">Login</a></li>
+           <
+          {% endif %}
+        
+           
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+     
+  </header>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">

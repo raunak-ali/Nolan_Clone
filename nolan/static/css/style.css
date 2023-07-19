@@ -47,6 +47,51 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+/*--------------------------------------------------------------
+# Script
+--------------------------------------------------------------*/
+#headerScript{
+  background: rgb(245, 242, 240);
+  margin-top: 60px;
+  opacity:1;
+  transition: all 0.5s;
+  z-index: 997;
+  padding:  0 20px;
+  top: 0px;
+  
+  display: flex;
+  height: 64px;
+  padding-inline: 50px; 
+  color:rgba(0, 0, 0, 0.88);
+}
+.navbar-script ul{
+  background: 0 0;
+  border: none;
+  justify-content: flex-end;
+  min-width: 360px;
+  color: rgba(0, 0, 0, 0.88);
+  line-height: 46px;
+  box-shadow: none;
+  display: none;
+  padding: 0;
+  margin:0;
+}
+
+.navbar-script{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Lexend Deca',sans-serif;
+  font-size: 14px;
+  background:0 0;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+.navbar-script .nav-link{
+
+  
+}
+
 
 /*--------------------------------------------------------------
 # Preloader

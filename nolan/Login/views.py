@@ -3,7 +3,7 @@ from User.models import UserProfile,Scripts
 
 # Create your views here.
 
-
+import openai
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from typing import ContextManager
@@ -14,7 +14,68 @@ from django.conf import settings
 from django.db.models import Q
 from django.contrib import messages
 from User.forms import ScriptForm
+import json
 
+
+import openai
+from nolan import settings
+
+#openai.organization = "org-chuck-norris-kernel"
+openai.api_key = settings.ChatGPTKey
+
+
+
+def Script(request):
+  return render(request,"Script.html")
+def generate_script(title, plot, genre):
+    if openai.api_key == "":
+        print("No API key.")
+        return "No API key."
+
+    script_metadata = ""
+    script_metadata += f"Title: {title}\n\n"
+    script_metadata += "Plot:\n"
+    script_metadata += f"{plot}\n\n"
+    script_metadata += f"Genre: {genre}\n\n"
+
+    request = """
+    This is a script generation application.
+    """ + script_metadata + """
+    The script should contain 2 scenes and a list of characters.
+    Do provide the complete dialogues and detailed descriptions.
+    Reply in JSON format: {
+        "script": "Script content",
+        "Characters": "List of characters"
+    }
+    The response should only contain this JSON object.
+    If needed, you should use basic screenplay formatting.
+    """
+    print("IN GENERATE ", request)
+
+    return query(request)
+
+def query(request):
+    # Call OpenAI API to generate the script
+    print("IN query")
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=request,
+        max_tokens=1500,
+        n=1,
+        stop=None,
+        temperature=0.2
+    )
+    print(response)
+
+    if response.choices:
+        script = response.choices[0].text.strip().replace('\n', '\n\n')
+        print("SCRIPT",script)
+        return script
+    else:
+        print("FAILED  FOR SOME REASONs", response.choices)
+        return "Script generation failed."
+
+#openai.api_key = "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"
 # Create your views here.)
 def GenerateSceen_play(form):
   print(form.cleaned_data['title'])
@@ -28,9 +89,12 @@ def home(request):
     print(form)
     form = ScriptForm(request.POST)
     if form.is_valid():
-      
+      print("FORM IS VALID")
+      title=form.cleaned_data['title']
+      plot=form.cleaned_data['Plot']
+      genre=form.cleaned_data['genres']
       print(form.cleaned_data['title'])
-      GenerateSceen_play(form)
+      DATA=generate_script(title, plot, genre)
     else:
       #   Form is not valid, handle errors
       print("Erros",form.errors)
