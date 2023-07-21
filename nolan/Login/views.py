@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from User.models import UserProfile,Scripts
-
+import pandas as pd
 # Create your views here.
-
+import re
+import json
 import openai
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
@@ -41,14 +42,14 @@ def generate_script(title, plot, genre):
     request = """
     This is a script generation application.
     """ + script_metadata + """
-    The script should contain 2 scenes and a list of characters.
+    The script should contain 1 initial scenes and a list of characters.
     Do provide the complete dialogues and detailed descriptions.
-    Reply in JSON format: {
+    Reply in DiCTIONARY format: {
         "script": "Script content",
         "Characters": "List of characters"
     }
-    The response should only contain this JSON object.
-    If needed, you should use basic screenplay formatting.
+    The response should only contain this Dictionary.
+    you should use basic screenplay formatting.
     """
     print("IN GENERATE ", request)
 
@@ -56,7 +57,7 @@ def generate_script(title, plot, genre):
 
 def query(request):
     # Call OpenAI API to generate the script
-    print("IN query")
+    #print("IN query")
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=request,
@@ -65,14 +66,14 @@ def query(request):
         stop=None,
         temperature=0.2
     )
-    print(response)
+    #print(response)
 
     if response.choices:
         script = response.choices[0].text.strip().replace('\n', '\n\n')
-        print("SCRIPT",script)
+        #print("SCRIPT",script)
         return script
     else:
-        print("FAILED  FOR SOME REASONs", response.choices)
+        #print("FAILED  FOR SOME REASONs", response.choices)
         return "Script generation failed."
 
 #openai.api_key = "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"
@@ -86,7 +87,7 @@ def home(request):
   if request.method=='POST':
     print("POST")
     form.full_clean() 
-    print(form)
+    #print(form)
     form = ScriptForm(request.POST)
     if form.is_valid():
       print("FORM IS VALID")
@@ -95,6 +96,22 @@ def home(request):
       genre=form.cleaned_data['genres']
       print(form.cleaned_data['title'])
       DATA=generate_script(title, plot, genre)
+      print(DATA)
+      DATA= DATA.replace("\n", " ").replace("  ", "")
+      data = json.loads(DATA)
+      # Extract the script and characters
+      script = data['script']
+      characters = data['Characters']
+      #script=script.replace(" ","\n")
+
+      # Print the extracted script and characters
+      print("Script:")
+      print(script)
+      print("Characters:")
+      print(characters)
+    
+
+      return render(request,"Script.html",{'form':form,'title':title,'DATA':DATA,'script':script})
     else:
       #   Form is not valid, handle errors
       print("Erros",form.errors)

@@ -1,5 +1,5 @@
 /**
-* Template Name: Medilab
+* Template Name: Medilab in static
 * Updated: Jun 23 2023 with Bootstrap v5.3.0
 * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
 * Author: BootstrapMade.com
@@ -29,13 +29,32 @@ body {
   background-color: #171a1f;
 }
 
+.body-script {
+  font-family: "Open Sans", sans-serif;
+  display:block;
+  flex-flow: row wrap;
+  
+  min-width: 0;
+  flex-direction: row;
+  background: #f5f2f0;
+}
+img{
+  mix-blend-mode:multiply;
+}
+
 a {
-  color: #1977cc;
-  text-decoration: none;
+  font-size: 16px;
+  color: #25272c;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1 1;
+  overflow: hidden;
+  font-weight: 600;
+  font-family: 'Lexend Deca',sans-serif;
 }
 
 a:hover {
-  color: #3291e6;
+  color: #080808;
   text-decoration: none;
 }
 
@@ -50,19 +69,148 @@ h6 {
 /*--------------------------------------------------------------
 # Script
 --------------------------------------------------------------*/
-#headerScript{
-  background: rgb(245, 242, 240);
-  margin-top: 60px;
-  opacity:1;
+#Titleheader{
+  background: #e6e4e1;
   transition: all 0.5s;
   z-index: 997;
-  padding:  0 20px;
+  padding:  0 5px;
   top: 0px;
-  
   display: flex;
   height: 64px;
   padding-inline: 50px; 
   color:rgba(0, 0, 0, 0.88);
+  font-family: 'Lexend Deca',sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+}
+.Titlennavbar{
+  font-family: 'Lexend Deca',sans-serif;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.Titlennavbar ul{
+  border: none;
+  justify-content: flex-end;
+  min-width: 360px;
+  line-height: 46px;
+  box-shadow: none;
+  display: none;
+  padding: 0;
+  margin:0;
+}
+.Titlennavbar h1{
+  font-size: 16px;
+  margin: 0 15px;
+  color: #25272c;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1 1;
+  overflow: hidden;
+  font-weight: 600;
+  font-family: 'Lexend Deca',sans-serif;
+}
+.Titlennavbar a{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  -webkit-font-smoothing: antialiased;
+}
+.Titlennavbar .nav-link-script{
+
+  border: none;
+  justify-content: flex-end;
+  min-width: 360px;
+  line-height: 46px;
+  box-shadow: none;
+  padding: 0;
+  margin:0;
+  color:rgba(0, 0, 0, 0.88);
+  font-family: 'Lexend Deca',sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+}
+.navbar .title-nav-link-script{
+  font-size: 16px;
+  margin: 0 15px;
+  color: #25272c;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1 1;
+  overflow: hidden;
+  font-weight: 600;
+  font-family: 'Lexend Deca',sans-serif;
+}
+
+.Script-box{
+  width: 807px;
+  min-height: 930px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 -3px 29px -5px rgba(34,39,47,.14);
+  color: #25272c;
+  padding-left: 1in;
+  padding-right: 1in;
+  padding-top: 1in;
+  padding-bottom: 1in!important;
+  line-height: 1;
+  font-size: 12pt;
+  position: relative;
+  justify-content: center;
+ 
+}
+
+
+
+
+#headerScript{
+  background:transparent;
+  margin-top: 60px;
+  transition: all 0.5s;
+  z-index: 997;
+  padding:  0 5px;
+  top: 0px;
+  display: flex;
+  height: 64px;
+  padding-inline: 50px; 
+  color:rgba(0, 0, 0, 0.88);
+}
+.navbar-side{
+  margin-top: 0px;
+  background:#e6e4e1;
+  
+  font-family: 'Lexend Deca',sans-serif;
+  padding: 0;
+  float:left;
+  position:fixed;
+ 
+}
+.navbar-side-script{
+  flex: 0 0 320px;
+  max-width: 320px;
+  min-width: 320px;
+  width: 320px;
+  float:left;
+  position: sticky;
+
+}
+
+
+
+
+.navbar-script{
+  font-family: 'Lexend Deca',sans-serif;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 .navbar-script ul{
   background: 0 0;
@@ -77,7 +225,8 @@ h6 {
   margin:0;
 }
 
-.navbar-script{
+.navbar-script a{
+  color: rgba(0, 0, 0, 0.88);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -87,9 +236,17 @@ h6 {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
-.navbar-script .nav-link{
+.navbar-script .nav-link-script{
 
-  
+ 
+  border: none;
+  justify-content: flex-end;
+  min-width: 360px;
+  color: rgba(0, 0, 0, 0.88);
+  line-height: 46px;
+  box-shadow: none;
+  padding: 0;
+  margin:0;
 }
 
 
@@ -382,18 +539,47 @@ h6 {
   display: flex;
   list-style: none;
   align-items: center;
+  justify-content: end;
+  margin-inline-end: auto;
 }
 
 .navbar li {
   position: relative;
 }
+.navbar .nav-link-script{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: 'Lexend Deca',sans-serif;
+  color: #0d0d0d;
+  white-space: nowrap;
+  transition: 0.3s;
 
+}
 .navbar>ul>li {
   position: relative;
   white-space: nowrap;
   padding:0 10px;
+  justify-content: end;
+  mix-blend-mode:multiply;
+  margin-inline-end: auto;
 }
-
+.navbar ul img {
+  width: 30px;
+  height: auto;
+     display: flex; 
+      align-items: center;
+      color: inherit;
+      font-style: normal;
+      line-height: 0;
+      text-align: center;
+      text-transform: none;
+      vertical-align: -0.125em;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      
+}
 .navbar a,
 .navbar a:focus {
   display: flex;
