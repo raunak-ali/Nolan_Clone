@@ -33,15 +33,10 @@ body {
   font-family: "Open Sans", sans-serif;
   display:block;
   flex-flow: row wrap;
-  
   min-width: 0;
   flex-direction: row;
   background: #f5f2f0;
 }
-img{
-  mix-blend-mode:multiply;
-}
-
 a {
   font-size: 16px;
   color: #25272c;
