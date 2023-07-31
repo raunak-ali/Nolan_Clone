@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "sslserver",
     "social_django",
     "User",
     'multiselectfield',
@@ -166,4 +165,4 @@ LOGOUT_REDIRECT_URL = 'home'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "164642861598-8hmt0ra0mfgj7v0kpbfb5c5r3bos7jr4.apps.googleusercontent.com"
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "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"
-ChatGPTKey = "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"
+ChatGPTKey = "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"

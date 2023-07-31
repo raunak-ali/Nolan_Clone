@@ -43,12 +43,20 @@ def generate_script(title, plot, genre):
     This is a script generation application.
     """ + script_metadata + """
     The script should contain 1 initial scenes and a list of characters.
-    Do provide the complete dialogues and detailed descriptions.
-    Reply in DiCTIONARY format: {
+    Do provide the complete dialogues and detailed descriptions and arrange them into specific the dictionary.
+    Reply in json DiCTIONARY format: {
         "script": "Script content",
+        "scene_headings":"List of all screen_headings used in the script in proper order",
+        "dialogues":"List of all dialogues used in the script along with the charcters  speakking them",
+        "scene_breakdown":"Scene breakdown based on scene headings that aligns the elements of 
+        the above lists to make a scene making a proper arrangement of the action_lines list elements ,
+        dialogues list elements ,and shots  list elements(Use list indexing along with the list names  only)",
+        "shots ":"dictionary with scene_headings  as key and the shot as the value",
+        "descriptive_lines":"List of all lines that dont fit into the above lists used in the script in proper order",
         "Characters": "List of characters"
     }
     The response should only contain this Dictionary.
+    No part of the script should be left out of the dictionary
     you should use basic screenplay formatting.
     """
     print("IN GENERATE ", request)
@@ -70,7 +78,7 @@ def query(request):
 
     if response.choices:
         script = response.choices[0].text.strip().replace('\n', '\n\n')
-        #print("SCRIPT",script)
+        print("SCRIPT",response)
         return script
     else:
         #print("FAILED  FOR SOME REASONs", response.choices)
@@ -101,14 +109,14 @@ def home(request):
       data = json.loads(DATA)
       # Extract the script and characters
       script = data['script']
-      characters = data['Characters']
+      #characters = data['Characters']
       #script=script.replace(" ","\n")
 
       # Print the extracted script and characters
       print("Script:")
       print(script)
       print("Characters:")
-      print(characters)
+      #print(characters)
     
 
       return render(request,"Script.html",{'form':form,'title':title,'DATA':DATA,'script':script})

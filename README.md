@@ -85,3 +85,70 @@ References:-
         https://platform.openai.com/docs/quickstart/closing
 
         
+# Scene headings (Location and Time)
+scene_headings = [
+    "INT. ABANDONED ART STUDIO - DAY",
+    "EXT. CITY STREETS - DAY",
+    "INT. GOVERNMENT HEADQUARTERS - NIGHT",
+    "INT. ABANDONED ART STUDIO - NIGHT",
+    "EXT. CITY STREETS - CONTINUOUS",
+    "INT. GOVERNMENT HEADQUARTERS - CONTINUOUS",
+    "INT. ABANDONED ART STUDIO - CONTINUOUS"
+]
+
+# Action lines and character actions
+action_lines = [
+    "A dimly lit room filled with dusty canvases and broken sculptures. In the center, we find LARA (late 20s, pale and somber-looking) intently working on a mesmerizing painting of vibrant colors. She seems lost in her art, a sense of melancholy in her eyes.",
+    "Suddenly, a faint sound echoes through the room. Lara looks around, puzzled. She notices a hidden compartment under an old wooden table and carefully opens it. Inside, she finds a GLIMMERING CRYSTAL. As she touches it, a surge of energy rushes through her body, causing her to stumble back.",
+    "Lara picks up the shattered crystal fragments, realizing that her mission is accomplished.",
+    "Determined, Lara starts showcasing her art in public spaces—parks, squares, and street corners. Each time she unveils a new piece, the crowd is captivated, and they start to feel the emotions emanating from the artwork. Slowly, a spark of life returns to their eyes.",
+    "Word of Lara's miraculous art spreads like wildfire, reaching the ears of the emotionless government officials. They see her as a threat to their controlled society and decide to put an end to her subversive actions.",
+    "During the chaos, the crystal falls to the ground, shattering into pieces.",
+    "Amidst the chaos, Lara picks up the shattered crystal fragments, realizing that her mission is accomplished."
+]
+
+# Character names and dialogues
+dialogues = [
+    ("LARA", "(whispers) What is this?"),
+    ("LARA", "(whispers) They need to experience this."),
+    ("GOVERNMENT OFFICIAL 1", "(angry) We cannot let this disrupt the order we've established!"),
+    ("GOVERNMENT OFFICIAL 2", "(determined) Capture her, and seize that artifact!"),
+    ("LARA", "(smiling) Art has the power to change the world."),
+    ("CITIZEN 1", "(teary-eyed) I remember... I can feel again!"),
+    ("CITIZEN 2", "(excited) This is incredible!"),
+    ("GOVERNMENT OFFICIAL 1", "(astonished) Is this what we've been missing all along?"),
+    ("GOVERNMENT OFFICIAL 2", "(whispers) Maybe we were wrong...")
+]
+
+# Transitions
+transitions = [
+    "FADE OUT."
+]
+
+# Scene breakdown based on scene headings
+scene_breakdown = {
+    scene_headings[0]: [action_lines[0], dialogues[0]],
+    scene_headings[1]: [action_lines[1], dialogues[1]],
+    scene_headings[2]: [action_lines[4], dialogues[2], dialogues[3]],
+    scene_headings[3]: [action_lines[3]],
+    scene_headings[4]: [action_lines[5], dialogues[5], dialogues[6]],
+    scene_headings[5]: [action_lines[6], dialogues[4], dialogues[7], dialogues[8]],
+    scene_headings[6]: [action_lines[2], dialogues[9]],
+}
+
+# Shots (optional)
+shots = {
+    "INT. ABANDONED ART STUDIO - DAY": "MEDIUM SHOT of Lara painting her masterpiece.",
+    "INT. ABANDONED ART STUDIO - NIGHT": "CLOSE-UP of shattered crystal fragments on the floor.",
+    "EXT. CITY STREETS - DAY": "WIDE SHOT of Lara showcasing her art to the crowd.",
+    "EXT. CITY STREETS - CONTINUOUS": "PAN SHOT of citizens experiencing emotions for the first time.",
+}
+
+# Print the screenplay in a structured format
+for scene in scene_headings:
+    print(scene)
+    print(shots.get(scene, ""))  # Print optional shot description if available
+    for line in scene_breakdown.get(scene, []):
+        print(line)
+    print("\n")
+print(transitions[0])
